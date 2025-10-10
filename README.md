@@ -94,7 +94,7 @@ Now open **[http://127.0.0.1:5000/](http://127.0.0.1:5000/)** in your browser ðŸ
 
 ## ðŸ§  Model Information
 
-ViperAid uses **EfficientNet** and **timm** pretrained models for efficient and accurate image classification.
+ViperAid uses **EfficientNetV2-S** pretrained model for efficient and accurate image classification.
 
 * Models are initialized in PyTorch (`torch`, `torchvision`, `timm`, `efficientnet_pytorch`)
 * Images are preprocessed with transformations (`torchvision.transforms`)
