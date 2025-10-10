@@ -58,8 +58,8 @@ cd ViperAid
 ### 2️⃣ Create and Activate a Virtual Environment
 
 ```bash
-python3 -m venv venv
-source venv/bin/activate   # On Windows: venv\Scripts\activate
+py -3.12 -m venv myvenv # install python version 3.12 for larger library support
+source venv/bin/activate   # On Windows: Powershell: myvenv\Scripts\activate or Bash: source myvenv/Scripts/activate
 ```
 
 ### 3️⃣ Install Dependencies
@@ -68,7 +68,7 @@ source venv/bin/activate   # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### 4️⃣ Configure Environment Variables
+### 4️⃣ Configure Environment Variables - Optional
 
 ```bash
 export FLASK_APP=app.py
@@ -85,7 +85,7 @@ python populate_db.py
 ### 6️⃣ Run the Application
 
 ```bash
-flask run
+python app.py
 ```
 
 Now open **[http://127.0.0.1:5000/](http://127.0.0.1:5000/)** in your browser 🎉
