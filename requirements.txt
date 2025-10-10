@@ -1,0 +1,21 @@
+# Web Framework and Extensions
+Flask==2.3.3
+Flask-SQLAlchemy==3.0.5
+Flask-Login==0.6.3
+Werkzeug==2.3.7
+
+# Deep Learning and Computer Vision
+torch
+torchvision
+timm
+efficientnet-pytorch
+
+# Image Processing
+Pillow==10.0.1
+
+# Database
+SQLAlchemy==2.0.21
+
+# Utilities
+numpy>=1.24.3
+python-dotenv==1.0.0

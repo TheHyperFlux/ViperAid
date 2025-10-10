@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ViperAid - Safety Information</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #f0f2f5;
+      color: #2c3e50;
+    }
+
+    .navbar {
+      background: rgba(39, 174, 96, 0.95);
+      padding: 1rem 2rem;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 0 0 15px 15px;
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.7rem;
+      color: #fff !important;
+    }
+
+    .nav-link {
+      color: #fff !important;
+      font-weight: 500;
+      margin-right: 20px;
+      position: relative;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      left: 0;
+      bottom: -4px;
+      background-color: #fff;
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .navbar-toggler {
+      border: none;
+      outline: none;
+    }
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      width: 1.5em;
+      height: 1.5em;
+      text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Ensure toggler icon contrast on mobile */
+    @media (max-width: 768px) {
+      .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.7));
+      }
+      .navbar {
+        padding: 1rem;
+        border-radius: 0;
+      }
+      .nav-link {
+        margin: 0.5rem 0;
+      }
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 4rem 1rem;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 2rem;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      width: 80px;
+      height: 4px;
+      background: #27ae60;
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 4px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+    }
+
+    .card h4 {
+      color: #27ae60;
+      margin-bottom: 1rem;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #27ae60, #2ecc71);
+      border: none;
+      padding: 0.5rem 1.2rem;
+      border-radius: 25px;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(39, 174, 96, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #219653, #27ae60);
+      transform: scale(1.05);
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    ul li {
+      margin-bottom: 0.6rem;
+    }
+
+    .fade-in {
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .section-title {
+        font-size: 1.6rem;
+      }
+      .card {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="/">ViperAid</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="/snakebite">Snake Bite</a></li>
+        <li class="nav-item"><a class="nav-link" href="/rescue">Rescue</a></li>
+        <li class="nav-item"><a class="nav-link" href="/info">Info</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container fade-in">
+    <h2 class="section-title">Snake Safety Information</h2>
+
+    <div class="card">
+      <h4><i class="fas fa-shield-alt text-success mr-2"></i>Preventing Snakebites</h4>
+      <ul>
+        <li>Wear boots and thick pants when walking in grassy or forested areas.</li>
+        <li>Use a flashlight when walking outdoors at night.</li>
+        <li>Avoid sticking your hands into holes, thick grass, or under rocks without checking.</li>
+        <li>Keep your living area clean and free of debris to deter snakes.</li>
+        <li>Store food properly and avoid leaving it outside—it can attract rodents, which attract snakes.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h4><i class="fas fa-ambulance text-danger mr-2"></i>What to Do if Bitten</h4>
+      <ul>
+        <li>Stay calm and try to remember the color and shape of the snake.</li>
+        <li>Keep the affected limb immobilized and lower than the heart.</li>
+        <li>Remove tight clothing or jewelry near the bite area.</li>
+        <li>Do not attempt to suck out the venom or apply ice.</li>
+        <li>Call emergency services or use ViperAid’s rescue tool to get help.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h4><i class="fas fa-snake text-warning mr-2"></i>Handling Snake Encounters</h4>
+      <ul>
+        <li>Do not try to catch or kill the snake—it may provoke an attack.</li>
+        <li>Slowly back away and give it space to escape.</li>
+        <li>If the snake is inside your house or won’t leave, use ViperAid’s rescue feature.</li>
+        <li>Educate others not to harm snakes unnecessarily—they are vital for ecosystems.</li>
+      </ul>
+    </div>
+
+    <div class="card text-center">
+      <h4><i class="fas fa-search-location text-info mr-2"></i>Common Snakes in Nepal</h4>
+      <p>Nepal is home to several venomous and non-venomous snakes, including:</p>
+      <ul style="list-style: none; padding-left: 0;">
+        <li><strong>Indian Cobra</strong> – Highly venomous, hooded, found in lowlands.</li>
+        <li><strong>Krait</strong> – Active at night, neurotoxic bite, slender body.</li>
+        <li><strong>Russell’s Viper</strong> – Aggressive, highly venomous, triangular head.</li>
+        <li><strong>Rat Snake</strong> – Non-venomous, often mistaken for cobras.</li>
+      </ul>
+      <a href="/rescue" class="btn btn-primary mt-3">Identify a Snake</a>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
