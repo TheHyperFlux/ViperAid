@@ -59,7 +59,7 @@ cd ViperAid
 
 ```bash
 py -3.12 -m venv myvenv # install python version 3.12 for larger library support
-source venv/bin/activate   # On Windows: Powershell: myvenv\Scripts\activate or Bash: source myvenv/Scripts/activate
+source myvenv/Scripts/activate   # On Windows: Powershell: myvenv\Scripts\activate or Bash: source myvenv/Scripts/activate
 ```
 
 ### 3️⃣ Install Dependencies
