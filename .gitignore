@@ -1,3 +1,4 @@
 models/
 myvenv/
 __pycache__/
+.gitignore
